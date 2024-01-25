@@ -1,0 +1,6 @@
+unique_name: cookieid_count
+object_type: metric
+label: Raw Cookie Count
+calculation_method: count distinct
+dataset: clickstream
+column: cookieid

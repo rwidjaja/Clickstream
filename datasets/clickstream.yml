@@ -1,0 +1,49 @@
+unique_name: clickstream
+object_type: dataset
+label: clickstream
+connection_id: Postgres14
+table: clickstream
+
+columns:
+  - name: city
+    data_type: string
+  - name: client_lang
+    data_type: string
+  - name: cookieid
+    data_type: string
+  - name: country
+    data_type: string
+  - name: http_response
+    data_type: string
+  - name: ipaddress
+    data_type: string
+  - name: isp
+    data_type: string
+  - name: local_radio
+    data_type: string
+  - name: local_tv
+    data_type: string
+  - name: monitor_resolution
+    data_type: string
+    sql: "concat(res_horz,'x',res_vert)"
+  - name: pageview
+    data_type: long
+  - name: res_horz
+    data_type: string
+  - name: res_vert
+    data_type: string
+  - name: state
+    data_type: string
+  - name: timespent
+    data_type: long
+  - name: txn_date
+    data_type: string
+    sql: "substr(txn_time,1,10)"
+  - name: txn_id
+    data_type: string
+  - name: txn_time
+    data_type: string
+  - name: url
+    data_type: string
+  - name: user_agent
+    data_type: string

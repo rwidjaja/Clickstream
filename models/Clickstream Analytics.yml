@@ -1,0 +1,61 @@
+unique_name: Clickstream Analytics
+object_type: model
+label: Clickstream Analytics Cube
+include_default_drillthrough: true
+visible: true
+
+relationships:
+
+  - unique_name: clickstream_Product
+    from:
+      dataset: clickstream
+      join_columns:
+        - url
+    to:
+      dimension: Product
+      level: Product
+
+  - unique_name: clickstream_Date
+    from:
+      dataset: clickstream
+      join_columns:
+        - txn_date
+    to:
+      dimension: Date
+      level: Date
+
+  - unique_name: clickstream_Users
+    from:
+      dataset: clickstream
+      join_columns:
+        - cookieid
+    to:
+      dimension: Users
+      level: Users
+
+dimensions:
+  - city
+  - client_lang
+  - isp
+  - monitor_resolution
+  - user_agent
+
+metrics:
+
+  - unique_name: cookieid_count
+    folder: Visitor Metrics
+
+  - unique_name: cookieid_estimate
+    folder: Visitor Metrics
+
+  - unique_name: pageview
+    folder: Session Metrics
+
+  - unique_name: timespent
+    folder: Session Metrics
+
+  - unique_name: txn_id
+    folder: Commerce Metrics
+
+  - unique_name: Pageviews per Visitor
+    folder: Visitor Metrics

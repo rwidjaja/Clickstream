@@ -1,0 +1,6 @@
+unique_name: cookieid_estimate
+object_type: metric
+label: Estimated Cookie Count
+calculation_method: estimated count distinct
+dataset: clickstream
+column: cookieid

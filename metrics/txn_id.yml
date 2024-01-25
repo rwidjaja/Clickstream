@@ -1,0 +1,6 @@
+unique_name: txn_id
+object_type: metric
+label: Purchase Count
+calculation_method: estimated count distinct
+dataset: clickstream
+column: txn_id

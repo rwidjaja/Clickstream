@@ -1,0 +1,6 @@
+unique_name: timespent
+object_type: metric
+label: Time Spent
+calculation_method: sum
+dataset: clickstream
+column: timespent

@@ -1,0 +1,23 @@
+unique_name: user_agent
+object_type: dimension
+label: user_agent
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: user_agent
+    label: user_agent
+    folder: Client Attributes
+
+    levels:
+
+      - unique_name: User Agent
+
+level_attributes:
+
+  - unique_name: User Agent
+    label: User Agent
+    dataset: clickstream
+    name_column: user_agent
+    key_columns:
+      - user_agent

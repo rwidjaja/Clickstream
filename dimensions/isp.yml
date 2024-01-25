@@ -1,0 +1,23 @@
+unique_name: isp
+object_type: dimension
+label: isp
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: isp
+    label: isp
+    folder: Visitor Attributes
+
+    levels:
+
+      - unique_name: ISP
+
+level_attributes:
+
+  - unique_name: ISP
+    label: ISP
+    dataset: clickstream
+    name_column: isp
+    key_columns:
+      - isp

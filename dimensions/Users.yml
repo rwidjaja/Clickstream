@@ -1,0 +1,47 @@
+unique_name: Users
+object_type: dimension
+label: Users
+type: standard
+
+hierarchies:
+
+  - unique_name: Users
+    label: Users
+
+    levels:
+
+      - unique_name: Users
+
+        secondary_attributes:
+
+          - unique_name: Birth Date
+            label: Birth Date
+            folder: Visitor Attributes
+            contains_unique_names: true
+            dataset: users
+            name_column: birth_dt
+            key_columns:
+              - birth_dt
+
+          - unique_name: Gender
+            label: Gender
+            folder: Visitor Attributes
+            contains_unique_names: true
+            dataset: users
+            name_column: gender_cd
+            key_columns:
+              - gender_cd
+
+level_attributes:
+
+  - unique_name: Users
+    label: Users
+    is_unique_key: true
+    contains_unique_names: true
+    exclude_from_dim_agg: true
+    exclude_from_fact_agg: true
+    create_excludes_on_key: true
+    dataset: users
+    name_column: swid
+    key_columns:
+      - cookieid

@@ -1,0 +1,16 @@
+unique_name: users
+object_type: dataset
+label: users
+connection_id: Postgres14
+table: users
+
+columns:
+  - name: birth_dt
+    data_type: string
+  - name: cookieid
+    data_type: string
+    sql: "concat(\"{\", swid , \"}\")"
+  - name: gender_cd
+    data_type: string
+  - name: swid
+    data_type: string

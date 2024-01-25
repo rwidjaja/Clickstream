@@ -1,0 +1,5 @@
+unique_name: Postgres14
+label: Postgres14
+object_type: connection
+as_connection: Postgres14
+schema: atscale_data

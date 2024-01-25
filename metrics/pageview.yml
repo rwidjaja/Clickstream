@@ -1,0 +1,6 @@
+unique_name: pageview
+object_type: metric
+label: Pageviews
+calculation_method: sum
+dataset: clickstream
+column: pageview

@@ -1,0 +1,55 @@
+unique_name: Date
+object_type: dimension
+label: Date
+type: standard
+
+hierarchies:
+
+  - unique_name: Date
+    label: Date
+    folder: Date Attributes
+
+    levels:
+
+      - unique_name: calendaryear
+
+      - unique_name: Month
+
+      - unique_name: Date
+
+        secondary_attributes:
+
+          - unique_name: daynumberofweek
+            label: Day Number Of Week
+            folder: Date Attributes
+            contains_unique_names: true
+            dataset: date_omniture
+            name_column: daynumberofweek
+            key_columns:
+              - daynumberofweek
+
+level_attributes:
+
+  - unique_name: calendaryear
+    label: Calendar Year
+    dataset: date_omniture
+    name_column: calendaryear
+    key_columns:
+      - calendaryear
+
+  - unique_name: Date
+    label: Date
+    is_unique_key: true
+    contains_unique_names: true
+    dataset: date_omniture
+    name_column: datekey
+    key_columns:
+      - fulldatealternatekey
+
+  - unique_name: Month
+    label: Month
+    dataset: date_omniture
+    name_column: englishmonthname
+    key_columns:
+      - englishmonthname
+      - calendaryear

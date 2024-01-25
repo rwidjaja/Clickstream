@@ -1,0 +1,43 @@
+unique_name: Product
+object_type: dimension
+label: Product
+type: standard
+
+hierarchies:
+
+  - unique_name: Product
+    label: Product
+
+    levels:
+
+      - unique_name: product_line
+
+      - unique_name: category
+
+      - unique_name: Product
+
+level_attributes:
+
+  - unique_name: category
+    label: Category
+    contains_unique_names: true
+    dataset: products
+    name_column: category
+    key_columns:
+      - category
+
+  - unique_name: Product
+    is_unique_key: true
+    contains_unique_names: true
+    dataset: products
+    name_column: url
+    key_columns:
+      - url
+
+  - unique_name: product_line
+    label: Product Line
+    contains_unique_names: true
+    dataset: products
+    name_column: product_line
+    key_columns:
+      - product_line

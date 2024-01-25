@@ -1,0 +1,4 @@
+unique_name: Pageviews per Visitor
+object_type: metric_calc
+label: Pageviews per Visitor
+expression: "([Measures].[pageview] / [Measures].[cookieid_count])"

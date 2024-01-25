@@ -1,0 +1,23 @@
+unique_name: client_lang
+object_type: dimension
+label: client_lang
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: client_lang
+    label: client_lang
+    folder: Client Attributes
+
+    levels:
+
+      - unique_name: Language
+
+level_attributes:
+
+  - unique_name: Language
+    label: Language
+    dataset: clickstream
+    name_column: client_lang
+    key_columns:
+      - client_lang

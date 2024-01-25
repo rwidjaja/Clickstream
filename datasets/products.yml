@@ -1,0 +1,14 @@
+unique_name: products
+object_type: dataset
+label: products
+connection_id: Postgres14
+table: products
+
+columns:
+  - name: category
+    data_type: string
+  - name: product_line
+    data_type: string
+    sql: "regexp_extract(url, 'http.+/([^/]*)/([^/]*)$', 1)"
+  - name: url
+    data_type: string

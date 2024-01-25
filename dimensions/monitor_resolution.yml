@@ -1,0 +1,23 @@
+unique_name: monitor_resolution
+object_type: dimension
+label: monitor_resolution
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: monitor_resolution
+    label: monitor_resolution
+    folder: Client Attributes
+
+    levels:
+
+      - unique_name: Monitor Resolution
+
+level_attributes:
+
+  - unique_name: Monitor Resolution
+    label: Monitor Resolution
+    dataset: clickstream
+    name_column: monitor_resolution
+    key_columns:
+      - monitor_resolution
